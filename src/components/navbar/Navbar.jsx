@@ -1,12 +1,12 @@
-import Links from './links/Links';
+import Link from 'next/link';
+import Links from './links/Links'
+import styles from './navbar.module.css'
 
 export default function Navbar() {
 	return (
 		<>
-			<div>
-				<div>
-					Logo
-				</div>
+			<div className={styles.container}>
+				<Link href='/' className={styles.logo}>Logo</Link>
 				<div>
 					<Links />
 				</div>
