@@ -5,21 +5,21 @@ import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
-// const getData = async (slug) => {
-//   const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
 
-  const post = await getPost(slug);
-
+//   const post = await getPost(slug);
+  const post = await getData(slug);
   return {
     title: post.title,
     description: post.desc,
@@ -30,10 +30,10 @@ const SinglePostPage = async ({ params }) => {
   const { slug } = params;
 
   // FETCH DATA WITH AN API
-//   const post = await getData(slug);
+  const post = await getData(slug);
 
   // FETCH DATA WITHOUT AN API
-  const post = await getPost(slug);
+//   const post = await getPost(slug);
 
   return (
     <div className={styles.container}>
@@ -57,8 +57,7 @@ const SinglePostPage = async ({ params }) => {
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
-              {/* {post.createdAt.toString().slice(4, 16)} */}
-				01.01.2024
+              {post.createdAt.toString().slice(4, 16)}
             </span>
           </div>
         </div>
