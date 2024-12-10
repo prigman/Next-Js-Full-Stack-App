@@ -4,7 +4,7 @@ export const authConfig = {
   },
   providers: [],
   callbacks: {
-    // FOR MORE DETAIL ABOUT CALLBACK FUNCTIONS CHECK https://next-auth.js.org/configuration/callbacks
+  
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
@@ -33,9 +33,9 @@ export const authConfig = {
 
       // ONLY AUTHENTICATED USERS CAN REACH THE BLOG PAGE
 
-      if (isOnBlogPage && !user) {
-        return false;
-      }
+      // if (isOnBlogPage && !user) {
+      //   return false;
+      // }
 
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
 

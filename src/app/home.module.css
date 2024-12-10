@@ -1,6 +1,5 @@
 .container {
 	display: flex;
-	gap: 100px;
 }
 
 .title {
@@ -22,10 +21,11 @@
 	cursor: pointer;
 	border: none;
 	border-radius: 5px;
-	&:first-child {
-		background-color: var(--btn);
-		color: var(--text);
-	}
+}
+
+.secondButton {
+	background-color: var(--btn);
+	color: var(--text);
 }
 
 .textContainer {

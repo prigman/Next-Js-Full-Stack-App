@@ -5,9 +5,9 @@ export default function Footer() {
 	return (
 		<>
 			<div className={styles.container}>
-				<div className={styles.logo}>lamadev</div>
+				<div className={styles.logo}>Way to Future</div>
 				<div className={styles.text}>
-					Lama Creative Thoughts agency @ All Rights Reserved
+					Way to Future Creative Thoughts agency @ All Rights Reserved
 				</div>
 			</div>
 		</>
