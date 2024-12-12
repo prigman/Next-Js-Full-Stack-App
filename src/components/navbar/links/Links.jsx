@@ -48,7 +48,7 @@ const Links = ({session}) => {
       </div>
       <Image
         className={styles.menuButton}
-        src="./menu.png"
+        src="/menu.png"
         alt=""
         width={30}
         height={30}

@@ -14,11 +14,11 @@ export default function HomePage() {
 						<Link href="./contact"><button className={styles.button}>Contact</button></Link>
 					</div>
 					<div className={styles.brands}>
-						<Image src='./brands.png' alt="" fill className={styles.brandImage}></Image>
+						<Image src='/brands.png' alt="" fill className={styles.brandImage}></Image>
 					</div>
 				</div>
 				<div className={styles.imageContainer}>
-					<Image src='./hero.gif' alt="" fill className={styles.heroImage}></Image>
+					<Image src='/hero.gif' alt="" fill className={styles.heroImage}></Image>
 				</div>
 			</div>
 		</>

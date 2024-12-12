@@ -16,7 +16,7 @@ export default function ContactPage() {
 		<>
 			<div className={styles.container}>
 				<div className={styles.imgContainer}>
-					<Image src="./contact.png" alt="" fill className={styles.img} />
+					<Image src="/contact.png" alt="" fill className={styles.img} />
 				</div>
 				<div className={styles.formContainer}>
 					{/* <HydrationTestNoSSR/> */}
