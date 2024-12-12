@@ -1,6 +1,6 @@
 export const authConfig = {
   pages: {
-    signIn: "./login",
+    signIn: "/login",
   },
   providers: [],
   callbacks: {
@@ -21,9 +21,9 @@ export const authConfig = {
     },
     authorized({ auth, request }) {
       const user = auth?.user;
-      const isOnAdminPanel = request.nextUrl?.pathname.startsWith("./admin");
-      const isOnBlogPage = request.nextUrl?.pathname.startsWith("./blog");
-      const isOnLoginPage = request.nextUrl?.pathname.startsWith("./login");
+      const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/admin");
+      const isOnBlogPage = request.nextUrl?.pathname.startsWith("/blog");
+      const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
 
       // ONLY ADMIN CAN REACH THE ADMIN DASHBOARD
 
