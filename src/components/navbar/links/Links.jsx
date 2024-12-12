@@ -13,15 +13,15 @@ const links = [
   },
   {
     title: "About",
-    path: "/about",
+    path: "./about",
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: "./contact",
   },
   {
     title: "Blog",
-    path: "/blog",
+    path: "./blog",
   },
 ];
 
@@ -37,18 +37,18 @@ const Links = ({session}) => {
         ))}
         {session?.user ? (
           <>
-            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "./admin" }} />}
             <form action={handleLogout}>
               <button className={styles.logout}>Logout</button>
             </form>
           </>
         ) : (
-          <NavLink item={{ title: "Login", path: "/login" }} />
+          <NavLink item={{ title: "Login", path: "./login" }} />
         )}
       </div>
       <Image
         className={styles.menuButton}
-        src="/menu.png"
+        src="./menu.png"
         alt=""
         width={30}
         height={30}

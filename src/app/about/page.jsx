@@ -35,7 +35,7 @@ export default function AboutPage() {
 				</div>
 				<div className={styles.imageContainer}>
 
-					<Image src="/about.png" alt="About Image" className={styles.image} fill/>
+					<Image src="./about.png" alt="About Image" className={styles.image} fill/>
 				</div>
 			</div>
 		</>

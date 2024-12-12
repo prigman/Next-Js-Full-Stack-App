@@ -13,7 +13,7 @@ const RegisterForm = () => {
   const router = useRouter();
 
   useEffect(() => {
-    state?.success && router.push("/login");
+    state?.success && router.push("./login");
   }, [state?.success, router]);
 
   return (
@@ -28,7 +28,7 @@ const RegisterForm = () => {
       />
       <button>Register</button>
       {state?.error}
-      <Link href="/login">
+      <Link href="./login">
         Have an account? <b>Login</b>
       </Link>
     </form>
