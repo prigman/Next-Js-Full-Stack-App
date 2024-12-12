@@ -24,8 +24,8 @@ export const addPost = async (prevState,formData) => {
 
     await newPost.save();
     console.log("saved to db");
-    revalidatePath("/blog");
-    revalidatePath("/admin");
+    revalidatePath("./blog");
+    revalidatePath("./admin");
   } catch (err) {
     console.log(err);
     return { error: "Something went wrong!" };
@@ -40,8 +40,8 @@ export const deletePost = async (formData) => {
 
     await Post.findByIdAndDelete(id);
     console.log("deleted from db");
-    revalidatePath("/blog");
-    revalidatePath("/admin");
+    revalidatePath("./blog");
+    revalidatePath("./admin");
   } catch (err) {
     console.log(err);
     return { error: "Something went wrong!" };
@@ -62,7 +62,7 @@ export const addUser = async (prevState,formData) => {
 
     await newUser.save();
     console.log("saved to db");
-    revalidatePath("/admin");
+    revalidatePath("./admin");
   } catch (err) {
     console.log(err);
     return { error: "Something went wrong!" };
@@ -78,7 +78,7 @@ export const deleteUser = async (formData) => {
     await Post.deleteMany({ userId: id });
     await User.findByIdAndDelete(id);
     console.log("deleted from db");
-    revalidatePath("/admin");
+    revalidatePath("./admin");
   } catch (err) {
     console.log(err);
     return { error: "Something went wrong!" };
