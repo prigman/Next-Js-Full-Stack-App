@@ -34,6 +34,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 10px;
 }
 
 .box {
@@ -48,3 +49,16 @@
 .image {
 	object-fit: contain;
 }
+
+@media (max-width: 1024px) {
+	.container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 430px) {
+	.boxes {
+		flex-direction: column;
+	}
+}
+

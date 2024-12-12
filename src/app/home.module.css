@@ -36,7 +36,7 @@
 }
 
 .brands {
-	width: 500px;
+	max-width: 500px;
 	height: 50px;
 	position: relative;
 	filter: grayscale(1);
@@ -45,4 +45,16 @@
 .imageContainer {
 	position: relative;
 	flex: 1;
+}
+
+@media (max-width: 1024px) {
+	.container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 640px) {
+	.title {
+		font-size: 67px;
+	}
 }
